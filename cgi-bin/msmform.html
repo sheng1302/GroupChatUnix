@@ -1,0 +1,25 @@
+#! /bin/sh
+
+echo "Content-type: text/html"
+echo ""
+
+echo " <html> "
+echo " <body>"
+echo " <script> "
+echo "function myFunction() {"
+echo "var userName = document.URL;"
+echo "document.getElementById(\"nameA\").value = "userName"; }"
+echo "function resetFOrm() { "
+echo "document.getElementById(\"mess\").value = "\" \""; }"
+
+echo " </script> "
+
+echo "<iframe width="0" height="0" border="0" name="frame" ></iframe> "
+echo "<form action="append" method="post" target="frame" onsubmit="myFunction\(\)"> "
+echo "     Enter here:$name<br> "
+echo "    <input type="text" name="message" id="mess"><br> "
+echo " <input type="hidden" name="name" id="nameA" > "
+echo "    <input type="submit" value="Submit"> "
+echo "  </form> "
+echo " </body> "
+echo "  </html> "

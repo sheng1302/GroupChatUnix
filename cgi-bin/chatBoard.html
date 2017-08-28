@@ -1,0 +1,17 @@
+#! /bin/sh
+
+
+echo "Content-type:text/html"
+echo ""
+
+echo " <META HTTP-EQUIV="refresh" CONTENT="3">"
+
+s=$(wc -l server.c)
+s="expr $s - 1"
+
+echo "Welcome! There are $s people online!"
+cat server.c|tr "\n" ","
+echo " <br> "
+
+cat testCon1
+

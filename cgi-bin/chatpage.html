@@ -1,0 +1,12 @@
+#! /bin/sh
+
+
+echo "Content-type:text/html"
+echo ""
+
+read name
+
+echo " <frameset rows = "50%,25%"> "
+echo "   <frame src="chatBoard.html"> "
+echo "   <frame src="msmform.html?$name"> "
+echo " </frameset> "

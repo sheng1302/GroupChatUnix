@@ -1,0 +1,11 @@
+#! /bin/sh
+
+echo "Content-type: text/plain"
+echo ""
+
+read stuff
+
+someone=$(echo $stuff | cut -f10 -d'%' | cut -f1 -d'%' | cut -f2 -d'D' )
+content=$(echo $stuff | cut -f1 -d'&')
+echo "$someone : $(date) : $content" >> testCon1
+echo " <br> " >> testCon1
